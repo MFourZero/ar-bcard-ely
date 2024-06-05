@@ -26,10 +26,10 @@
         <a-scene loading-screen="dotsColor: #00884a; backgroundColor: #00884a;"
             arjs
             embedded
-            renderer="logarithmicDepthBuffer: true;"
+            renderer="colorManagement: true;"
             vr-mode-ui="enabled: false;"
             gesture-detector
-            light="defaultLightsEnabled: true"
+            light="defaultLightsEnabled: false"
             id="scene"            
         >
             <a-assets>
@@ -53,13 +53,14 @@
                     gltf-model="#sofc"
                     scale="1 1 1"
                     position="0 0 0"
-                    rotation="0 -45 0"
+                    rotation="0 45 0"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
                 <a-light
                     type="ambient"
                     color="white"
+                    intensity="3"
                     >
                 </a-light>
                 <a-light
@@ -103,7 +104,7 @@
                 >                                           
                 </a-light>
             </a-marker>   
-            <a-entity camera></a-entity>>
+            <a-entity camera></a-entity>
         </a-scene>
 
         <!-- Info Button -->
